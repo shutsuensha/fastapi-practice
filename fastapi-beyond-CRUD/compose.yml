@@ -1,0 +1,56 @@
+version: "3.0"
+
+services:
+  web:
+    build: .
+
+    command: fastapi run src --port 8000 --host 0.0.0.0
+
+    volumes:
+      - .:/app
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - db
+      - redis
+    
+    networks:
+      - app-network
+
+  db:
+    image: postgres:15
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: bookly
+      POSTGRES_PASSWORD: docent1315
+
+    networks:
+      - app-network
+
+  redis:
+    image: redis:6
+
+    networks:
+      - app-network
+
+  celery:
+    build: .
+
+    command: celery -A src.celery_tasks.c_app worker --loglevel=INFO
+
+    volumes:
+      - .:/app
+
+    depends_on:
+      - redis
+
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,15 +1,17 @@
 # TO DO
 ## сделать тестирование и описать в readme
+## добавить jinja
+## редиректы на login
+## не понятно как клиент отправляет access token и  где хранит
+
 
 # Main functionality
 - User Registration
-- Email Verification via a Link
-- User Authentication and Authorization using JWT Token and JWT Token Revocation
-- User Role Management
 - Password Reset via Email Link
-- Book Management
-- Review Management for Books
-- Tag Management for Books
+- Email Verification via a Link
+- User Authentication using JWT Token and JWT Token Revocation
+- User Authorization via Roles
+- Book, Review, Tag CRUD Operations and Relationships
 
 # Developing locally
 

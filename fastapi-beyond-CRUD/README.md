@@ -8,9 +8,9 @@
 # Main functionality
 - User Registration
 - Password Reset via Email Link
-- Email Verification via a Link
-- User Authentication using JWT Token and JWT Token Revocation
-- User Authorization via Roles
+- User Verification via Email Link
+- User Authentication and Authorization using JWT Token and JWT Token Revocation
+- Role-Based Access Control
 - Book, Review, Tag CRUD Operations and Relationships
 
 # Developing locally
@@ -35,7 +35,7 @@ sudo systemctl status redis-server
 redis-cli
 ```
 ### Add `REDIS_URL` to `.env`:
-REDIS_URL=redis://localhost:6379/0`
+REDIS_URL=redis://localhost:6379/0
 
 ## Install, start postgresql server, first connect
 ```bash
@@ -132,10 +132,20 @@ http://127.0.0.1:8000/api/v1/docs
 docker compose up
 ```
 http://127.0.0.1:8000/api/v1/docs
-
 ## Now u can modify your models, connect to container, generate migration and apply them
 ```bash
 sudo docker exec -it <hash web container> /bin/bash
 alembic revision --autogenerate -m "init"
 alembic upgrade head
 ```
+
+# Testing
+```bash
+pytest
+```
+## Testing with Schemathesis
+```bash
+st run http://127.0.0.1:8000/api/v1/openapi.json --experimental=openapi-3.1
+st run http://127.0.0.1:8000/api/v1/openapi.json --checks all --experimental=openapi-3.1
+```
+

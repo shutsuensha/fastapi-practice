@@ -1,4 +1,5 @@
 from src.auth.schemas import UserCreateModel
+from .confest import fake_session, fake_user_service, test_client
 
 auth_prefix = f"/api/v1/auth"
 

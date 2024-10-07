@@ -11,6 +11,8 @@ c_app.conf.update(
     broker_connection_retry_on_startup=True  # Повторное подключение при старте
 )
 
+print(Config)
+
 
 @c_app.task()
 def send_email(recipients: list[str], subject: str, body: str):

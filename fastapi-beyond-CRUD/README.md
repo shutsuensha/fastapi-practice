@@ -1,10 +1,3 @@
-# TO DO
-## сделать тестирование и описать в readme
-## добавить jinja
-## редиректы на login
-## не понятно как клиент отправляет access token и  где хранит
-
-
 # Main functionality
 - User Registration
 - Password Reset via Email Link

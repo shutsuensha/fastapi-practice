@@ -1,8 +1,10 @@
-# 🪦 Learning FastAPI in 30 days 😵😵 TRYHARD  🔪🔪
-# Пропускаешь хотябы 1 день - нищий, слабейший, жалкий, неспособный ниначто ДАЖЕ 30 ДНЕЙ позаниматься - червяк
-### STARTED 14.10.2024
-- [ ] day 1 - 14.10.2024    
+# 🪦 Learning FastAPI
+# во имя Отца Олега
+> Зачем так стремиться к смерти ? 
+> Стремиться к смерти ? ты не правильно понимаешь - мы уже живые мертвецы.
+# до хранит господ идущего
 # Courses
+- https://cloud.mail.ru/public/AsCf/9b4zyViP4
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/
 - https://freecoursesite.com/mastering-rest-apis-with-fastapi/
@@ -12,6 +14,7 @@
 - https://s1.sharewood.co/
 - https://s16.slivskladru.com/
 - https://stepik.org/catalog
+- https://supersliv.biz/
 - https://lolz.guru/
 - https://www.udemy.com/
 # Youtube

@@ -7,7 +7,8 @@
 - [x] day 1 - 14.10.2024
 - [x] day 2 - 15.10.2024
 - [x] day 3 - 16.10.2024
-- [ ] day 4 - 17.10.2024
+- [x] day 4 - 17.10.2024
+- [ ] day 5 - 18.10.2024
 # Courses
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/

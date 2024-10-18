@@ -1,0 +1,4 @@
+.venv
+*.rdb
+celerybeat*
+__pycache__

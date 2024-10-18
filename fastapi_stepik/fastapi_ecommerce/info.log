@@ -1,0 +1,16 @@
+Log: [305a8e06-2d01-4643-b04c-9fc48010cef9:2024-10-18T02:38:57.954720+0300 - INFO - Successfully accessed / 
+Log: [188c4c81-b760-437c-84f1-f710a00c3bcd:2024-10-18T02:39:03.645486+0300 - INFO - Successfully accessed /docs 
+Log: [145193d9-0a06-40dc-898f-7ec1f1528239:2024-10-18T02:39:03.928953+0300 - INFO - Successfully accessed /openapi.json 
+Log: [88401192-a62d-4938-a12a-29480038f781:2024-10-18T02:41:53.600350+0300 - INFO - Successfully accessed / 
+Log: [385ef67a-1c39-4ef7-bb34-0c88d6306a7c:2024-10-18T02:42:01.604068+0300 - INFO - Successfully accessed /category/all_categories 
+Log: [e9f6c3ea-af71-4852-8dd0-bf55e74c673b:2024-10-18T02:43:27.281753+0300 - WARNING - Request to /test failed 
+Log: [7368a4fd-0c26-4c63-b713-ea11bac6a760:2024-10-18T02:44:24.570671+0300 - ERROR - Request to / failed:  
+Log: [f8cfec85-d531-4db9-b0c0-e30f158689fd:2024-10-18T02:44:25.616775+0300 - ERROR - Request to / failed:  
+Log: [8ea78dec-6de8-42cb-9cbd-5199047322cb:2024-10-18T02:44:36.170899+0300 - ERROR - Request to / failed:  
+Log: [3022e7b9-f856-4d19-a676-65e174e741b3:2024-10-18T02:44:38.268365+0300 - ERROR - Request to / failed:  
+Log: [8421ea52-3768-4dd2-83da-1b58b92dd50b:2024-10-18T02:45:12.153734+0300 - ERROR - Request to / failed:  
+Log: [e0c500a9-286a-4115-aa77-b9246aacf4df:2024-10-18T02:46:31.938118+0300 - ERROR - Request to / failed: 123123 
+Log: [c1e9cff0-f041-4aba-a254-896e5d3cabab:2024-10-18T02:47:40.166271+0300 - ERROR - Request to / failed: 123123 
+Log: [84c842eb-1ba0-4903-aedd-6ed1ff4ff602:2024-10-18T02:48:22.877685+0300 - INFO - Successfully accessed /docs 
+Log: [c2011f35-0aed-421e-a899-c729cc97fcdd:2024-10-18T02:48:23.078930+0300 - INFO - Successfully accessed /openapi.json 
+Log: [18b6a772-0c77-4fd0-91bb-2baaeef6d078:2024-10-18T02:49:07.952565+0300 - ERROR - Request to / failed: some excp 

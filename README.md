@@ -10,6 +10,7 @@
 - [x] day 4 - 17.10.2024
 - [ ] day 5 - 18.10.2024
 # Courses
+- https://cloud.mail.ru/public/AsCf/9b4zyViP4
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/
 - https://freecoursesite.com/mastering-rest-apis-with-fastapi/

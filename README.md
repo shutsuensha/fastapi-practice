@@ -2,12 +2,6 @@
 # Зачем так стремиться к смерти ? 
 # Стремиться к смерти ? ты не правильно понимаешь - мы уже живые мертвецы.
 # до хранит господ идущего
-### STARTED 14.10.2024
-- [x] day 1 - 14.10.2024
-- [x] day 2 - 15.10.2024
-- [x] day 3 - 16.10.2024
-- [x] day 4 - 17.10.2024
-- [ ] day 5 - 18.10.2024
 # Courses
 - https://cloud.mail.ru/public/AsCf/9b4zyViP4
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/

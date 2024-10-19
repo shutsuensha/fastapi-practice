@@ -11,6 +11,7 @@
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/
 - https://freecoursesite.com/mastering-rest-apis-with-fastapi/
 - https://courseclub.me/talkpython-modern-apis-with-fastapi-and-python-course/
+- https://s1.sharewood.co/threads/michael-yin-polnoe-rukovodstvo-po-celery-i-fastapi-2022.389982/ - https://cloud.mail.ru/public/hDa4/Rpz7fHKda
 -----------
 - https://s1.sharewood.co/
 - https://s16.slivskladru.com/

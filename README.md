@@ -5,7 +5,7 @@
 <img alt="otec oleg" src="oleg.jpg"> 
 
 # до хранит господ идущего
-- Started 14.10.2024
+## Started 14.10.2024
 # Courses
 - https://artemshumeiko.ru/
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/

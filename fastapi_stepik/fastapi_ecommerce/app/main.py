@@ -25,8 +25,8 @@ async def log_middleware(request: Request, call_next):
 
 
 @app.get("/")
-async def welcome() -> dict:
-    raise Exception("some excp")
+async def welcome():
+    return "Hello popa"
 
 
 app.include_router(category.router)

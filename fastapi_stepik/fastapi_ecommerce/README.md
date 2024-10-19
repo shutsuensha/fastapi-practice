@@ -15,3 +15,8 @@ target_metadata = Base.metadata
 alembic revision --autogenerate -m "init"
 alembic upgrade head
 ```
+# Run docker production
+```bash
+docker compose -f docker-compose.prod.yml up
+docker compose -f docker-compose.prod.yml exec web alembic upgrade head
+```

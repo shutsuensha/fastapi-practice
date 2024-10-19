@@ -14,10 +14,10 @@
 - https://artemshumeiko.ru/
 - https://s1.sharewood.co/
 - https://s16.slivskladru.com/
-- https://stepik.org/catalog
 - https://supersliv.biz/
 - https://lolz.guru/
 - https://www.udemy.com/
+- https://stepik.org/catalog
 # Youtube
 - [RU] https://www.youtube.com/watch?v=z4pbneT6SLw&list=PLYnH8mpFQ4akzzS1D9IHkMuXacb-bD4Cl
 - [RU] https://www.youtube.com/watch?v=gBfkX9H3szQ&list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS

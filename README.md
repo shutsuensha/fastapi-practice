@@ -6,12 +6,12 @@
 
 # до хранит господ идущего
 # Courses
+- https://artemshumeiko.ru/
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/
 - https://freecoursesite.com/mastering-rest-apis-with-fastapi/
 - https://courseclub.me/talkpython-modern-apis-with-fastapi-and-python-course/
 -----------
-- https://artemshumeiko.ru/
 - https://s1.sharewood.co/
 - https://s16.slivskladru.com/
 - https://supersliv.biz/

@@ -6,6 +6,8 @@
 <img alt="otec oleg" src="oleg.jpg"> 
 
 # до хранит господ идущего
+- full stack example https://github.com/fastapi/full-stack-fastapi-template
+- sqlmodel learn https://sqlmodel.tiangolo.com/tutorial/fastapi/
 # Courses
 - https://artemshumeiko.ru/
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/

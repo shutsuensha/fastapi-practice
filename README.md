@@ -6,6 +6,7 @@
 <img alt="otec oleg" src="oleg.jpg"> 
 
 # до хранит господ идущего
+- https://github.com/fastapi/full-stack-fastapi-template
 # Courses
 - https://artemshumeiko.ru/
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/

@@ -9,6 +9,8 @@
 - full stack example https://github.com/fastapi/full-stack-fastapi-template
 - sqlmodel learn https://sqlmodel.tiangolo.com/tutorial/fastapi/
 # Courses
+- https://training.talkpython.fm/fastapi-courses
+- https://testdriven.io/courses/tdd-fastapi/
 - https://artemshumeiko.ru/
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/

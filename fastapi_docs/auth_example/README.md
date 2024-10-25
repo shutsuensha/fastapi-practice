@@ -1,4 +1,4 @@
-# OAuth2 and JWT Authorization example from FastAPI docs
+# OAuth2 and JWT Authorization with scopes example from FastAPI docs
 ## Web server
 ```bash
 uvicorn auth:app --reload

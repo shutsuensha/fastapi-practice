@@ -10,9 +10,6 @@
 - sqlmodel learn https://sqlmodel.tiangolo.com/tutorial/fastapi/
 # Courses
 - https://stepik.org/course/179694/syllabus?search=5684002559
-- https://training.talkpython.fm/fastapi-courses
-- https://testdriven.io/courses/tdd-fastapi/
-- https://artemshumeiko.ru/
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/
 - https://freecoursesite.com/mastering-rest-apis-with-fastapi/
@@ -24,8 +21,6 @@
 - https://s16.slivskladru.com/
 - https://supersliv.biz/
 - https://lolz.guru/
-- https://www.udemy.com/
-- https://stepik.org/catalog
 # Youtube
 - [RU] https://www.youtube.com/watch?v=z4pbneT6SLw&list=PLYnH8mpFQ4akzzS1D9IHkMuXacb-bD4Cl
 - [RU] https://www.youtube.com/watch?v=gBfkX9H3szQ&list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS

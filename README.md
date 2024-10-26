@@ -9,22 +9,19 @@
 - full stack example https://github.com/fastapi/full-stack-fastapi-template
 - sqlmodel learn https://sqlmodel.tiangolo.com/tutorial/fastapi/
 # Courses
-- https://training.talkpython.fm/fastapi-courses
-- https://testdriven.io/courses/tdd-fastapi/
-- https://artemshumeiko.ru/
+- https://stepik.org/course/179694/syllabus?search=5684002559
 - https://freecoursesite.com/fastapi-the-complete-course-2023-beginner-advanced/
 - https://freecoursesite.com/complete-fastapi-masterclass-from-scratch/
 - https://freecoursesite.com/mastering-rest-apis-with-fastapi/
 - https://courseclub.me/talkpython-modern-apis-with-fastapi-and-python-course/
 - https://s1.sharewood.co/threads/michael-yin-polnoe-rukovodstvo-po-celery-i-fastapi-2022.389982/ - https://cloud.mail.ru/public/hDa4/Rpz7fHKda
 - https://s1.sharewood.co/threads/jan-giacomelli-masshtabiruemye-prilozhenija-fastapi-na-aws-2022.389983/ - https://cloud.mail.ru/public/oXco/reQwBzLkf
+- https://s1.sharewood.co/threads/michael-herman-razrabotka-cherez-testirovanie-s-pomoschju-fastapi-i-docker-2021.182856/ - https://cloud.mail.ru/public/oeeW/9SecyduZR
 -----------
 - https://s1.sharewood.co/
 - https://s16.slivskladru.com/
 - https://supersliv.biz/
 - https://lolz.guru/
-- https://www.udemy.com/
-- https://stepik.org/catalog
 # Youtube
 - [RU] https://www.youtube.com/watch?v=z4pbneT6SLw&list=PLYnH8mpFQ4akzzS1D9IHkMuXacb-bD4Cl
 - [RU] https://www.youtube.com/watch?v=gBfkX9H3szQ&list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS

@@ -1,7 +1,9 @@
 ## Web server
 ```bash
-python3 src/main.py
+uvicorn app.main:app --reload
 ```
+
+
 ## Postgres
 ```bash
 sudo systemctl status postgresql
@@ -19,18 +21,31 @@ GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
 ```bash
 psql -U myuser -d mydatabase
 ```
+
+
 ## Migrations
 ```bash
-alembic init -t async src/migrations
+alembic init -t async app/migrations
 ```
-### edit `src/migrations/env.py`
+### edit `app/migrations/env.py`
 ```python
-from src.config import settings
-from src.database import Base
-from src.models.hotels import HotelsOrm
-from src.models.rooms import RoomsOrm
+from alembic import context
+#------------------------------
+<PASTE CODE BELOW HERE>
+#------------------------------
+if config.config_file_name is not None:
+    fileConfig(config.config_file_name)
+```
+```python
+from app.config import settings
+from app.database.db import Base
+from app.models.hotels import HotelsOrm
+from app.models.rooms import RoomsOrm
+from app.models.users import UsersOrm
 
-config.set_main_option("sqlalchemy.url", f"{settings.DB_URL}?async_fallback=True")
+config = context.config
+
+config.set_main_option("sqlalchemy.url", f"{settings.DB_URL}")
 
 target_metadata = Base.metadata
 ```
@@ -39,3 +54,5 @@ target_metadata = Base.metadata
 alembic revision --autogenerate -m "init"
 alembic upgrade head
 ```
+
+

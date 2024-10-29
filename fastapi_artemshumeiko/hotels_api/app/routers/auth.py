@@ -4,7 +4,7 @@ from app.schemas.users import UserIn, UserOut
 from app.models.users import UsersOrm
 from sqlalchemy import insert, select, func, delete, update
 
-router = APIRouter(prefix="/auth", tags=["auth"])
+router = APIRouter(prefix="/auth", tags=["users"])
 
 
 @router.post("/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)

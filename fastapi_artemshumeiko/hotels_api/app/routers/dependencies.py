@@ -1,4 +1,4 @@
-from fastapi import Depends, Query, Request, HTTPException
+from fastapi import Depends, Query, Request, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Annotated
 from pydantic import BaseModel, Field
@@ -7,6 +7,7 @@ import jwt
 from app.config import settings
 from passlib.context import CryptContext
 from datetime import datetime, timedelta, timezone
+
 
 class FilterParams(BaseModel):
     limit: int = Field(100, gt=0, le=100)
@@ -45,17 +46,19 @@ def encode_token(token: str) -> dict:
     except jwt.exceptions.DecodeError:
         raise HTTPException(status_code=401, detail="Неверный токен")
 
-
 def get_token(request: Request):
     token = request.cookies.get("access_token", None)
     if not token:
         raise HTTPException(status_code=401, detail="Вы не предоставили токен доступа")
     return token
 
-
 def get_current_user_id(token: Annotated[str, Depends(get_token)]):
     data = encode_token(token)
+    if datetime.now() > datetime.fromtimestamp(data['exp']):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Token expired!"
+            )
     return data["user_id"]
-
 
 user_id = Annotated[int, Depends(get_current_user_id)]

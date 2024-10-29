@@ -1,3 +1,15 @@
+## Tech stack
+- fastapi
+- uvicorn
+- pydantic
+- pydanitc-settings
+- sqlalchemy
+- asyncpg
+- alembic
+- PostgreSQL
+- OpenAPI (Swagger UI)
+- RESTful API
+
 ## Web server
 ```bash
 uvicorn app.main:app --reload

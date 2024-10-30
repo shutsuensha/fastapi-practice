@@ -1,21 +1,42 @@
-from fastapi import APIRouter, status, HTTPException
+from fastapi import APIRouter, status, HTTPException, Query
 from app.routers.dependencies import db
 from app.schemas.rooms import RoomIn, RoomOut, RoomPatch
-from sqlalchemy import insert, select, func, delete, update
-from app.models import RoomsOrm, HotelsOrm
+from sqlalchemy import insert, select, func, delete, update, not_, or_, and_
+from app.models import RoomsOrm, HotelsOrm, BookingsOrm
+from datetime import date
 
 router = APIRouter(prefix="/hotels", tags=["rooms"])
 
 
 @router.get("/{hotel_id}/rooms", response_model=list[RoomOut])
-async def get_rooms(hotel_id: int, db: db):
+async def get_rooms(hotel_id: int, db: db, date_from: date = Query(), date_to: date = Query()):
     hotel = await db.scalar(select(HotelsOrm).where(HotelsOrm.id == hotel_id))
     if hotel is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail='hotel not found'
         )
-    rooms = await db.scalars(select(RoomsOrm).where(RoomsOrm.hotel_id == hotel_id))
+    
+    query = select(RoomsOrm).where(
+        RoomsOrm.hotel_id == hotel_id,
+        not_(
+            select(BookingsOrm.room_id)
+            .where(
+                BookingsOrm.room_id == RoomsOrm.id,
+                or_(
+                    and_(
+                        BookingsOrm.date_from <= date_to,
+                        BookingsOrm.date_to >= date_from
+                    ),
+                    and_(
+                        BookingsOrm.date_from >= date_from,
+                        BookingsOrm.date_to <= date_to
+                    )
+                )
+            ).exists()
+        )
+    )
+    rooms = await db.scalars(query)
     return rooms    
 
 

@@ -1,10 +1,10 @@
 from app.routers.dependencies import filter, db
 from fastapi import APIRouter, status, HTTPException
 
-from sqlalchemy import insert, select, func, delete, update
+from sqlalchemy import insert, select, func, delete, update, and_, or_
 
 from app.schemas.hotels import HotelIn, HotelOut, HotelPatch
-from app.models import HotelsOrm
+from app.models import HotelsOrm, RoomsOrm, BookingsOrm
 
 
 router = APIRouter(prefix="/hotels", tags=["hotels"])
@@ -12,13 +12,43 @@ router = APIRouter(prefix="/hotels", tags=["hotels"])
 
 @router.get('/', response_model=list[HotelOut])
 async def get_hotels(filter: filter, db: db):
-    query = select(HotelsOrm)
+    if filter.date_to and filter.date_from:
+        room_count_subquery = (
+            select(RoomsOrm.hotel_id, func.count().label('room_count'))
+            .group_by(RoomsOrm.hotel_id)
+            .subquery()
+        )
+
+        booked_rooms_subquery = (
+            select(RoomsOrm.hotel_id, func.count().label('booked_rooms'))
+            .where(RoomsOrm.id.in_(
+                select(BookingsOrm.room_id)
+                .where(
+                    or_(
+                        BookingsOrm.date_from.between(filter.date_from, filter.date_to),
+                        BookingsOrm.date_to.between(filter.date_from, filter.date_to)
+                    )
+                )
+                .group_by(BookingsOrm.room_id)
+            ))
+            .group_by(RoomsOrm.hotel_id)
+            .subquery()
+        )
+
+        query = (
+            select(HotelsOrm)
+            .join(room_count_subquery, HotelsOrm.id == room_count_subquery.c.hotel_id)
+            .outerjoin(booked_rooms_subquery, HotelsOrm.id == booked_rooms_subquery.c.hotel_id)
+            .where((room_count_subquery.c.room_count - func.coalesce(booked_rooms_subquery.c.booked_rooms, 0)) != 0)
+        )
+    else:
+        query = select(HotelsOrm)
     if filter.location:
         query = query.filter(func.lower(HotelsOrm.location).contains(filter.location.strip().lower()))
     if filter.title:
         query = query.filter(func.lower(HotelsOrm.title).contains(filter.title.strip().lower()))
     query = query.offset(filter.offset).limit(filter.limit)
-    hotels = await db.scalars(query)
+    hotels = await db.scalars(query, {'date_from': filter.date_from, 'date_to': filter.date_to})
     return hotels
 
 

@@ -6,7 +6,7 @@ from app.database import async_session_maker
 import jwt
 from app.config import settings
 from passlib.context import CryptContext
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 
 
 class FilterParams(BaseModel):
@@ -14,6 +14,8 @@ class FilterParams(BaseModel):
     offset: int = Field(0, ge=0)
     location: str | None = None
     title: str | None = None
+    date_from: date | None = None
+    date_to: date | None = None
 
 filter = Annotated[FilterParams, Query()]
 

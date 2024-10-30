@@ -2,7 +2,7 @@ from fastapi import Depends, Query, Request, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Annotated
 from pydantic import BaseModel, Field
-from app.database.db import async_session_maker
+from app.database import async_session_maker
 import jwt
 from app.config import settings
 from passlib.context import CryptContext
@@ -43,8 +43,8 @@ def verify_password(plain_password, hashed_password):
 def encode_token(token: str) -> dict:
     try:
         return jwt.decode(token, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
-    except jwt.exceptions.DecodeError:
-        raise HTTPException(status_code=401, detail="Неверный токен")
+    except (jwt.exceptions.DecodeError, jwt.exceptions.ExpiredSignatureError) as e:
+        raise HTTPException(status_code=401, detail="Неверный токен или токен истек")
 
 def get_token(request: Request):
     token = request.cookies.get("access_token", None)

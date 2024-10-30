@@ -2,8 +2,7 @@ from fastapi import APIRouter, status, HTTPException
 from app.routers.dependencies import db
 from app.schemas.rooms import RoomIn, RoomOut, RoomPatch
 from sqlalchemy import insert, select, func, delete, update
-from app.models.rooms import RoomsOrm
-from app.models.hotels import HotelsOrm
+from app.models import RoomsOrm, HotelsOrm
 
 router = APIRouter(prefix="/hotels", tags=["rooms"])
 

@@ -9,12 +9,9 @@ from alembic import context
 
 #--------------------------------------------
 from app.config import settings
-from app.database.db import Base
-from app.models.hotels import HotelsOrm
-from app.models.rooms import RoomsOrm
-from app.models.users import UsersOrm
-from app.models.bookings import BookingsOrm
-from app.models.facilities import FacilitiesOrm, RoomsFacilitiesOrm
+from app.database import Base
+from app.models import rooms_facilities, FacilitiesOrm, BookingsOrm, UsersOrm, RoomsOrm, HotelsOrm
+
 config = context.config
 
 config.set_main_option("sqlalchemy.url", f"{settings.DB_URL}")

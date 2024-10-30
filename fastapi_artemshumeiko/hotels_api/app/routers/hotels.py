@@ -4,7 +4,7 @@ from fastapi import APIRouter, status, HTTPException
 from sqlalchemy import insert, select, func, delete, update
 
 from app.schemas.hotels import HotelIn, HotelOut, HotelPatch
-from app.models.hotels import HotelsOrm
+from app.models import HotelsOrm
 
 
 router = APIRouter(prefix="/hotels", tags=["hotels"])

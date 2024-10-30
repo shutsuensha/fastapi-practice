@@ -18,7 +18,7 @@ class FilterParams(BaseModel):
 filter = Annotated[FilterParams, Query()]
 
 
-async def get_db():
+async def get_db(): 
     async with async_session_maker() as session:
         yield session
 

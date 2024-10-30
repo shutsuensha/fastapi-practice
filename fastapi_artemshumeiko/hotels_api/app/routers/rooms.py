@@ -17,7 +17,7 @@ async def get_rooms(hotel_id: int, db: db):
             detail='hotel not found'
         )
     rooms = await db.scalars(select(RoomsOrm).where(RoomsOrm.hotel_id == hotel_id))
-    return rooms
+    return rooms    
 
 
 @router.get("/{hotel_id}/rooms/{room_id}", response_model=RoomOut)

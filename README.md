@@ -12,3 +12,4 @@
 - FastAPI + CI/CD Pipelines
 - FastAPI + Testing
 - FastAPI + React
+- FastAPI + Catch

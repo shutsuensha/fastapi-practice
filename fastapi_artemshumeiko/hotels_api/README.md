@@ -1,15 +1,3 @@
-## Tech stack
-- fastapi
-- uvicorn
-- pydantic
-- pydanitc-settings
-- sqlalchemy
-- asyncpg
-- alembic
-- PostgreSQL
-- OpenAPI (Swagger UI)
-- RESTful API
-
 ## Web server
 ```bash
 uvicorn app.main:app --reload
@@ -67,4 +55,12 @@ alembic revision --autogenerate -m "init"
 alembic upgrade head
 ```
 
+## Redis
+sudo systemctl start redis-server
+sudo systemctl status redis-server
 
+## Celery
+celery -A app.tasks.celery_app.celery_instance worker --loglevel=info
+
+## Celery Beat
+celery -A app.tasks.celery_app.celery_instance beat --loglevel=info

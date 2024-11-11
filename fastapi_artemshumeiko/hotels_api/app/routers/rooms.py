@@ -69,7 +69,9 @@ async def get_room(hotel_id: int, room_id: int, db: db):
             status_code=status.HTTP_404_NOT_FOUND,
             detail='hotel not found'
         )
-    room = await db.scalar(select(RoomsOrm).where(RoomsOrm.hotel_id == hotel_id, RoomsOrm.id == room_id).options(selectinload(RoomsOrm.facilities)))
+    room = await db.scalar(select(RoomsOrm)
+                           .where(RoomsOrm.hotel_id == hotel_id, RoomsOrm.id == room_id)
+                           .options(selectinload(RoomsOrm.facilities)))
     if room is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -95,7 +97,9 @@ async def create_room(hotel_id: int, db: db, room_in: RoomIn):
             status_code=status.HTTP_404_NOT_FOUND,
             detail='hotel not found'
         )
-    room = await db.scalar(insert(RoomsOrm).values(hotel_id=hotel_id, **room_in.model_dump(exclude={"facilities_ids"})).returning(RoomsOrm))
+    room = await db.scalar(insert(RoomsOrm)
+                           .values(hotel_id=hotel_id, **room_in.model_dump(exclude={"facilities_ids"}))
+                           .returning(RoomsOrm))
     
     insert_values = [{"room_id": room.id, "facility_id": facility_id} for facility_id in room_in.facilities_ids]
     await db.execute(insert(rooms_facilities), insert_values)

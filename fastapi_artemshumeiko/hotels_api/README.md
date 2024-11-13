@@ -19,7 +19,7 @@ GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
 ```
 ### Connection
 ```bash
-psql -U myuser -d mydatabase
+psql -U evalshine -d hotels_db
 ```
 
 
@@ -64,3 +64,11 @@ celery -A app.tasks.celery_app.celery_instance worker --loglevel=info
 
 ## Celery Beat
 celery -A app.tasks.celery_app.celery_instance beat --loglevel=info
+
+## Testing
+pip3 install pytest
+pip3 install pytest-dotenv
+pip3 install pytest-asyncio
+
+### Test postgres
+psql -U evalshine -d hotels_db_test

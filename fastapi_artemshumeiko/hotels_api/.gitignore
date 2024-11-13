@@ -3,3 +3,5 @@ __pycache__
 .env
 run.sql
 static
+.pytest_cache
+celerybeat-schedule

@@ -51,7 +51,7 @@ async def get_hotels(filter: filter, db: db):
         query = query.filter(func.lower(HotelsOrm.title).contains(filter.title.strip().lower()))
     query = query.offset(filter.offset).limit(filter.limit)
     hotels = await db.scalars(query, {'date_from': filter.date_from, 'date_to': filter.date_to})
-    return hotels
+    return [HotelOut.model_validate(el.__dict__) for el in hotels]
 
 
 @router.post('/', response_model=HotelOut, status_code=status.HTTP_201_CREATED)

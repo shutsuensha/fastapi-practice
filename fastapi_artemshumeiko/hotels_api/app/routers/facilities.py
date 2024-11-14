@@ -10,9 +10,8 @@ router = APIRouter(prefix="/facilities", tags=["Удобства"])
 
 
 @router.get('/', response_model=list[FacilityOut])
-@cache(expire=10)
+# @cache(expire=10)
 async def get_facilities(db: db):
-    print('123')
     facilities = await db.scalars(select(FacilitiesOrm))
     return [FacilityOut.model_validate(el.__dict__) for el in facilities]
 
@@ -22,6 +21,6 @@ async def create_facility(db: db, facility_in: FacilityIn):
     facility = await db.scalar(insert(FacilitiesOrm).values(**facility_in.model_dump()).returning(FacilitiesOrm))
     await db.commit()
 
-    test_task.delay()
+    # test_task.delay()
 
     return facility

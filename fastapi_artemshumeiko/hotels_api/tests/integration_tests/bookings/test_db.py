@@ -47,6 +47,7 @@ async def test_booking_crud(db):
 
     #delete
     await db.execute(delete(BookingsOrm).where(BookingsOrm.id == new_booking.id))
+    await db.commit()
     
     result = await db.execute(select(BookingsOrm).where(BookingsOrm.id == new_booking.id))
     booking = result.scalars().first()

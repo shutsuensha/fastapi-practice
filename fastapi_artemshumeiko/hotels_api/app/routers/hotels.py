@@ -8,11 +8,12 @@ from app.models import HotelsOrm, RoomsOrm, BookingsOrm
 from fastapi_cache.decorator import cache
 
 
+
 router = APIRouter(prefix="/hotels", tags=["hotels"])
 
 
 @router.get('/', response_model=list[HotelOut])
-@cache(expire=10)
+# @cache(expire=10)
 async def get_hotels(filter: filter, db: db):
     if filter.date_to and filter.date_from:
         room_count_subquery = (

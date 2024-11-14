@@ -59,4 +59,4 @@ async def add_booking(user_id: user_id, db: db, booking_in: BookingIn):
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="No available rooms"
         )
-    return {'status', 'ok'}
+    return {'status': 'ok'}

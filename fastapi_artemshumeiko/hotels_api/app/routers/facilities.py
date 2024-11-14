@@ -10,7 +10,7 @@ router = APIRouter(prefix="/facilities", tags=["Удобства"])
 
 
 @router.get('/', response_model=list[FacilityOut])
-# @cache(expire=10)
+@cache(expire=10)
 async def get_facilities(db: db):
     facilities = await db.scalars(select(FacilitiesOrm))
     return [FacilityOut.model_validate(el.__dict__) for el in facilities]

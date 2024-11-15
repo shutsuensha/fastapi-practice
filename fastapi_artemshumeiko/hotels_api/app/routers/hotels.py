@@ -16,6 +16,11 @@ router = APIRouter(prefix="/hotels", tags=["hotels"])
 @cache(expire=10)
 async def get_hotels(filter: filter, db: db):
     if filter.date_to and filter.date_from:
+        if filter.date_from > filter.date_to:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="The 'date_from' must be earlier than 'date_to'."
+            )
         room_count_subquery = (
             select(RoomsOrm.hotel_id, func.count().label('room_count'))
             .group_by(RoomsOrm.hotel_id)

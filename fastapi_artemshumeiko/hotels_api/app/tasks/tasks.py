@@ -11,12 +11,6 @@ from datetime import date
 
 
 @celery_instance.task
-def test_task():
-    sleep(5)
-    print("Я молодец")
-
-
-@celery_instance.task
 def resize_image(image_path: str):
     sizes = [1000, 500, 200]
     output_folder = 'app/static/images'
@@ -46,7 +40,6 @@ def resize_image(image_path: str):
 
 
 async def get_bookings_with_today_checkin_helper():
-    print("Я ЗАПУСКАЮСЬ")
     async with async_session_maker_null_pool() as session:
         query = (
             select(BookingsOrm)

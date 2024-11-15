@@ -4,7 +4,6 @@ from app.schemas.facilities import FacilityIn, FacilityOut
 from app.routers.dependencies import db
 from app.models import FacilitiesOrm
 from fastapi_cache.decorator import cache
-from app.tasks.tasks import test_task
 
 router = APIRouter(prefix="/facilities", tags=["Удобства"])
 

@@ -70,5 +70,5 @@ pip3 install pytest
 pip3 install pytest-dotenv
 pip3 install pytest-asyncio
 
-### Test postgres
+### Test db
 psql -U evalshine -d hotels_db_test

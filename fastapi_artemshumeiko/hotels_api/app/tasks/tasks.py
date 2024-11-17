@@ -8,10 +8,11 @@ from app.tasks.celery_app import celery_instance
 from sqlalchemy import select
 from app.models import BookingsOrm
 from datetime import date
-
+import logging
 
 @celery_instance.task
 def resize_image(image_path: str):
+    logging.debug(f"Вызывается функция image_path с {image_path=}")
     sizes = [1000, 500, 200]
     output_folder = 'app/static/images'
 
@@ -36,8 +37,7 @@ def resize_image(image_path: str):
         # Сохраняем изображение
         img_resized.save(output_path)
 
-    print(f"Изображение сохранено в следующих размерах: {sizes} в папке {output_folder}")
-
+    logging.info(f"Изображение сохранено в следующих размерах: {sizes} в папке {output_folder}")
 
 async def get_bookings_with_today_checkin_helper():
     async with async_session_maker_null_pool() as session:

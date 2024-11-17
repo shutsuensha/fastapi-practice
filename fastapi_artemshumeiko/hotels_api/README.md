@@ -56,19 +56,81 @@ alembic upgrade head
 ```
 
 ## Redis
+```bash
 sudo systemctl start redis-server
 sudo systemctl status redis-server
+```
 
 ## Celery
+```bash
 celery -A app.tasks.celery_app.celery_instance worker --loglevel=info
+```
 
 ## Celery Beat
+```bash
 celery -A app.tasks.celery_app.celery_instance beat --loglevel=info
+```
 
 ## Testing
+```bash
 pip3 install pytest
 pip3 install pytest-dotenv
 pip3 install pytest-asyncio
+```
 
 ### Test db
+```bash
 psql -U evalshine -d hotels_db_test
+```
+
+
+## Docker
+```bash
+docker network create myNetwork
+
+docker run --name booking_db \
+    -p 6432:5432 \
+    -e POSTGRES_USER=abcde \
+    -e POSTGRES_PASSWORD=abcde \
+    -e POSTGRES_DB=booking \
+    --network=myNetwork \
+    --volume pg-booking-data:/var/lib/postgresql/data \
+    -d postgres:15
+
+docker run --name booking_cache \
+    -p 7379:6379 \
+    --network=myNetwork \
+    -d redis:7.4
+
+
+docker build -t fastapi .
+
+docker run --name booking_back \
+    -p 7777:8000 \
+    --network=myNetwork \
+    fastapi
+
+
+docker run --name booking_celery_worker \
+    --network=myNetwork \
+    fastapi \
+    celery -A app.tasks.celery_app.celery_instance worker --loglevel=info
+
+
+docker run --name booking_celery_beat \
+    --network=myNetwork \
+    fastapi \
+    celery -A app.tasks.celery_app.celery_instance beat --loglevel=info
+
+
+docker run --name booking_nginx \
+    --volume ./nginx.conf:/etc/nginx/nginx.conf \
+    --network=myNetwork \
+    --rm -p 80:80 nginx
+```
+
+## Docker compose
+```bash
+docker compose build - (build image from Dockerfile)
+docker compose up
+```

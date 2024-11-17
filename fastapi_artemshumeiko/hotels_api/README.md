@@ -90,12 +90,12 @@ docker network create myNetwork
 
 docker run --name booking_db \
     -p 6432:5432 \
-    -e POSTGRES_USER=abcde \
-    -e POSTGRES_PASSWORD=abcde \
+    -e POSTGRES_USER=evalshine \
+    -e POSTGRES_PASSWORD=docent1315 \
     -e POSTGRES_DB=booking \
     --network=myNetwork \
-    --volume pg-booking-data:/var/lib/postgresql/data \
-    -d postgres:15
+    --volume pg-data:/var/lib/postgresql/data \
+    -d postgres:16
 
 docker run --name booking_cache \
     -p 7379:6379 \
@@ -133,4 +133,50 @@ docker run --name booking_nginx \
 ```bash
 docker compose build - (build image from Dockerfile)
 docker compose up
+```
+
+## Gitlab
+- Create project
+### Generate local ssh key add to Gitlab
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+- Clone empty repo via ssh
+- Add source code
+- git push
+
+
+## VPS - adminvps
+```bash
+ssh username@server_ip
+```
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+- Add ssh key to gitlab
+### Install git
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
+- Clone project from gitlab via ssh
+- Add .env file
+## Install Docker
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```

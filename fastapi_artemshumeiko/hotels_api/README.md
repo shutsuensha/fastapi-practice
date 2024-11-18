@@ -131,6 +131,22 @@ docker run --name booking_nginx \
     --rm -p 80:80 -d nginx
 ```
 
+## Nginx DDOS
+```nginx.conf
+events {}
+
+http {
+    limit_req_zone $binary_remote_addr zone=mylimit:10m rate=10r/s;
+
+    server {
+        location / {
+            limit_req zone=mylimit;
+            proxy_pass http://booking_back:8000/;
+        }
+    }
+}
+```
+
 ## Docker compose
 ```bash
 docker compose build - (build image from Dockerfile)
@@ -186,3 +202,47 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 - https://my.adminvps.ru/index.php?m=DNSManager2 - add domain and ip from vps
 
 ## SSL
+### Generate
+- sudo apt-get install snapd
+- sudo snap install --classic certbot
+- sudo apt-get install nginx
+- stop docker nginx
+- systemctl start nginx
+- sudo certbot certonly --nginx
+- enter email, domain
+- systemctl stop nginx
+- run docker nginx
+### Update
+- stop docker nginx
+- systemctl start nginx
+- certbot renew --force-renewal
+- systemctl stop nginx
+- run docker nginx
+### nginx.conf example
+```nginx.conf
+events {}
+
+http {
+    server {
+        listen 443 ssl;
+
+        location / {
+            proxy_pass http://booking_back:8000/;
+        }
+
+        ssl_certificate /etc/letsencrypt/live/hotelsapi.xyz/fullchain.pem
+        ssl_certificate_key /etc/letsencrypt/live/hotelsapi.xyz/privkey.pem;
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    }
+}
+```
+### Run ssl nginx
+```bash
+docker run --name booking_nginx
+    --volume ./nginx.conf:/etc/nginx/nginx.conf
+    --volume /etc/letsencrypt:/etc/letsencrypt
+    --volume /var/lib/letsencrypt:/var/lib/letsencrypt
+    --network=myNetwork
+    --rm -p 80:80 -p 443:443 nginx
+```

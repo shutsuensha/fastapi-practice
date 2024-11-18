@@ -239,10 +239,13 @@ http {
 ```
 ### Run ssl nginx
 ```bash
-docker run --name booking_nginx
-    --volume ./nginx.conf:/etc/nginx/nginx.conf
-    --volume /etc/letsencrypt:/etc/letsencrypt
-    --volume /var/lib/letsencrypt:/var/lib/letsencrypt
-    --network=myNetwork
-    --rm -p 80:80 -p 443:443 nginx
+docker run --name booking_nginx \
+    --volume ./nginx.conf:/etc/nginx/nginx.conf \
+    --volume /etc/letsencrypt:/etc/letsencrypt \
+    --volume /var/lib/letsencrypt:/var/lib/letsencrypt \
+    --network=myNetwork \
+    --rm -p 443:443 -d nginx
 ```
+
+## Site
+- https://hotelsapi.xyz

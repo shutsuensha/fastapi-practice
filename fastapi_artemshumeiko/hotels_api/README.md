@@ -94,12 +94,14 @@ docker run --name booking_db \
     -e POSTGRES_PASSWORD=docent1315 \
     -e POSTGRES_DB=booking \
     --network=myNetwork \
+    --rm \
     --volume pg-data:/var/lib/postgresql/data \
     -d postgres:16
 
 docker run --name booking_cache \
     -p 7379:6379 \
     --network=myNetwork \
+    --rm \
     -d redis:7.4
 
 
@@ -180,3 +182,10 @@ sudo apt-get update
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+
+## Domain 
+- https://cp.hoster.by/domains/715624/dns/hosting - hotelsapi.xyz
+- Add dns servers: ns1.adminvps.ru, ns2.adminvps.net
+- https://my.adminvps.ru/index.php?m=DNSManager2 - add domain and ip from vps
+
+## SSL

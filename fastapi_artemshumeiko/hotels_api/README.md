@@ -128,24 +128,21 @@ docker run --name booking_celery_beat \
 docker run --name booking_nginx \
     --volume ./nginx.conf:/etc/nginx/nginx.conf \
     --network=myNetwork \
-    --rm -p 80:80 nginx
+    --rm -p 80:80 -d nginx
 ```
 
 ## Docker compose
 ```bash
 docker compose build - (build image from Dockerfile)
-docker compose up
+docker compose up -d
 ```
 
 ## Gitlab
 - Create project
-### Generate local ssh key add to Gitlab
-```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-- Clone empty repo via ssh
-- Add source code
-- git push
+### Add remote to gitlab
+- git remote add gitlab https://gitlab.com/username/new-repo.git
+- git push gitlab
+- git remote -v (all remotes)
 
 
 ## VPS - adminvps

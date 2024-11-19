@@ -230,7 +230,7 @@ http {
             proxy_pass http://booking_back:8000/;
         }
 
-        ssl_certificate /etc/letsencrypt/live/hotelsapi.xyz/fullchain.pem
+        ssl_certificate /etc/letsencrypt/live/hotelsapi.xyz/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/hotelsapi.xyz/privkey.pem;
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
@@ -249,3 +249,30 @@ docker run --name booking_nginx \
 
 ## Site
 - https://hotelsapi.xyz
+
+## CI/CD
+```bash
+docker run -d --name gitlab-runner --restart always \
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner:alpine
+```
+- settings ci/cd
+- disable instance runner
+- new project runner
+- run unsagged jobs
+- create runner
+```bash
+docker run --rm -it \
+    -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+    gitlab/gitlab-runner:alpine register
+```
+- enter url
+- enter token
+- name - enter
+- enter docker
+- enter docker:dind
+- nano /srv/gitlab-runner/config/config.toml
+- volumes = ["/cache"] меняем на volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+- Gitlab build - pipelines
+- try teplate - commit

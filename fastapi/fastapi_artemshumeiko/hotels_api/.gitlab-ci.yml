@@ -1,0 +1,40 @@
+stages:
+  - build
+  - lint_format
+  - migrations
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  before_script:
+    - cp ${ENV} .env
+  script:
+    - docker build -t hotelsapi .
+
+Lint:
+  stage: lint_format
+  script:
+    - docker run --rm hotelsapi ruff check
+
+Format:
+  stage: lint_format
+  script:
+    - docker run --rm hotelsapi ruff format --check
+
+Migrations:
+  stage: migrations
+  script:
+    - docker run --rm --network myNetwork hotelsapi alembic upgrade head
+
+Tests:
+  stage: test
+  script:
+    - docker run --rm --network myNetworkTest hotelsapi pytest -s -v
+
+deploy-job:
+  stage: deploy
+  script:
+    - docker compose -f docker-compose-prod.yml up -d
+    - docker exec booking_nginx nginx -s reload
+    - docker image prune -f

@@ -27,7 +27,7 @@
 - ssl
 - websockets
 
-## до хранит господ идущего ->
+## до хранит господ идущего
 - глубокое понимание асинхронного кода
 - asyncpg/aiohttp/asyncio/aiofiles
 - vuejs

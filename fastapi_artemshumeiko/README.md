@@ -1,0 +1,3 @@
+- https://artemshumeiko.zenclass.ru/student/courses/937c3a35-998d-4420-bd3d-9f64db23be23/lessons/18c89b4f-19e3-481f-be49-b9eda822a430
+- https://github.com/artemonsh/backend-course/invitations
+- https://t.me/+Oc5DtSUQsKwyOWEy

@@ -1,4 +1,4 @@
-## FastAPI till i die
+## :trollface: FastAPI till i die :trollface:
 ### Start - 14.10.2024
 
 ## во имя Отца Олега
@@ -7,7 +7,7 @@
 
 <img alt="otec oleg" src="oleg.jpg"> 
 
-## stack:
+## stack :smiling_imp::
 - fastapi
 - pydantic
 - sqlalchemy
@@ -46,7 +46,7 @@
 - работа с медиа - FileUpload, FileResponse - image, video
 - стриминг
 - postgresql
-## Courses
+## Courses :trollface:
 - https://www.udemy.com/
 - https://zelenka.guru/
 - https://s1.sharewood.co/

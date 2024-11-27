@@ -1,5 +1,4 @@
 # ☆zvezd☆
-> learning backend frameworks + stack\
-
-> preparing for interview 
+- learning backend frameworks + stack\
+- preparing for interview 
 # ☆zvezd☆

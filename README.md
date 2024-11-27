@@ -21,6 +21,7 @@
 - GraphQL
 - Базы данных - теоремы, индексы, теории, транзакции, ACID, Joins, where, group by, having
 - OOP, SOLID, GRASP, DRY
+- портфолио для собеседований
 ## Courses
 - https://s1.sharewood.co/threads/michael-yin-polnoe-rukovodstvo-po-celery-i-fastapi-2022.389982/ - https://cloud.mail.ru/public/hDa4/Rpz7fHKda
 - https://s1.sharewood.co/threads/jan-giacomelli-masshtabiruemye-prilozhenija-fastapi-na-aws-2022.389983/ - https://cloud.mail.ru/public/oXco/reQwBzLkf

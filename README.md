@@ -46,6 +46,7 @@
 - работа с медиа - FileUpload, FileResponse - image, video
 - стриминг
 - postgresql
+- https://solvit.space/
 ## Courses :trollface:
 - https://www.udemy.com/
 - https://zelenka.guru/

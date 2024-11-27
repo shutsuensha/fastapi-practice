@@ -46,7 +46,7 @@
 - работа с медиа - FileUpload, FileResponse - image, video
 - стриминг video, audio
 - postgresql
-- проекты: pinterest, soundcloud
+- проекты: pinterest, soundcloud, online store (https://thousand-cursed-enemies.com/)
 ## Artem Shumeiko
 - https://solvit.space/
 - https://artemshumeiko.zenclass.ru/student/courses/937c3a35-998d-4420-bd3d-9f64db23be23/lessons/18c89b4f-19e3-481f-be49-b9eda822a430

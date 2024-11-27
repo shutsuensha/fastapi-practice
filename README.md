@@ -1,4 +1,4 @@
-## :trollface: FastAPI till i die :trollface:
+## FastAPI till i die :trollface:
 ### Start - 14.10.2024
 
 ## во имя Отца Олега

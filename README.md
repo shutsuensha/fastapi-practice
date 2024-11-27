@@ -7,6 +7,26 @@
 
 <img alt="otec oleg" src="oleg.jpg"> 
 
+## stack:
+- fastapi
+- pydantic
+- sqlalchemy
+- alembic
+- postgresql
+- jwt tokens
+- redis
+- celery, celery beat, celery flower
+- pytest
+- ruff 
+- pyright
+- docker, docker-compose
+- ci/cd gitlab
+- nginx
+- vps
+- domain
+- ssl
+- websockets
+
 ## до хранит господ идущего ->
 - глубокое понимание асинхронного кода
 - asyncpg/aiohttp/asyncio/aiofiles
@@ -22,7 +42,15 @@
 - Базы данных - теоремы, индексы, теории, транзакции, ACID, Joins, where, group by, having
 - OOP, SOLID, GRASP, DRY
 - портфолио для собеседований
+- дочитать до конца доку
+- работа с медиа - FileUpload, FileResponse - image, video
+- стриминг
+- postgresql
 ## Courses
+- https://www.udemy.com/
+- https://zelenka.guru/
+- https://s1.sharewood.co/
+- https://freecoursesite.com/
 - https://s1.sharewood.co/threads/michael-yin-polnoe-rukovodstvo-po-celery-i-fastapi-2022.389982/ - https://cloud.mail.ru/public/hDa4/Rpz7fHKda
 - https://s1.sharewood.co/threads/jan-giacomelli-masshtabiruemye-prilozhenija-fastapi-na-aws-2022.389983/ - https://cloud.mail.ru/public/oXco/reQwBzLkf
 - https://s1.sharewood.co/threads/michael-herman-razrabotka-cherez-testirovanie-s-pomoschju-fastapi-i-docker-2021.182856/ - https://cloud.mail.ru/public/oeeW/9SecyduZR

@@ -31,6 +31,7 @@
 - интеграция api в aiogram bot
 - cloudflare
 - captcha
+- google one tap, python social auth
 - Анализ популярных сайтов на используемые технологии.
 ## Artem Shumeiko
 - https://solvit.space/

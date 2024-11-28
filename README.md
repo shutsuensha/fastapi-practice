@@ -7,26 +7,6 @@
 
 <img alt="otec oleg" src="oleg.jpg"> 
 
-## stack :smiling_imp::
-- fastapi
-- pydantic
-- sqlalchemy
-- alembic
-- postgresql
-- jwt tokens
-- redis
-- celery, celery beat, celery flower
-- pytest
-- ruff 
-- pyright
-- docker, docker-compose
-- ci/cd gitlab
-- nginx
-- vps
-- domain
-- ssl
-- websockets
-
 ## до хранит господ идущего
 - глубокое понимание асинхронного кода
 - asyncpg/aiohttp/asyncio/aiofiles
@@ -49,6 +29,9 @@
 - проекты: pinterest, soundcloud, online store (https://thousand-cursed-enemies.com/)
 - платежная система
 - интеграция api в aiogram bot
+- cloudflare
+- captcha
+- Анализ популярных сайтов на используемые технологии.
 ## Artem Shumeiko
 - https://solvit.space/
 - https://artemshumeiko.zenclass.ru/student/courses/937c3a35-998d-4420-bd3d-9f64db23be23/lessons/18c89b4f-19e3-481f-be49-b9eda822a430
@@ -66,3 +49,25 @@
 - https://s1.sharewood.co/threads/michael-herman-razrabotka-cherez-testirovanie-s-pomoschju-fastapi-i-docker-2021.182856/ - https://cloud.mail.ru/public/oeeW/9SecyduZR
 ## Tutorials
 - https://hackersandslackers.com/async-requests-aiohttp-aiofiles/
+
+
+
+## stack :smiling_imp::
+- fastapi
+- pydantic
+- sqlalchemy
+- alembic
+- postgresql
+- jwt tokens
+- redis
+- celery, celery beat, celery flower
+- pytest
+- ruff 
+- pyright
+- docker, docker-compose
+- ci/cd gitlab
+- nginx
+- vps
+- domain
+- ssl
+- websockets

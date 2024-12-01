@@ -12,6 +12,7 @@
 - работа с hh - https://www.youtube.com/watch?v=E4Nd-_A4me4, https://t.me/goingtoit + related
 - работа с resume - https://www.youtube.com/watch?v=9hiYCnydWV4, https://www.youtube.com/watch?v=RUp2HwofyhI + related
 - https://www.youtube.com/watch?v=ZgojwJEcLn8 - архитектура
+- ошибки поиска работы - https://www.youtube.com/watch?v=cSPAiV00_94
 - планирование (obsidian), визуализация - figma
 - глубокое понимание асинхронного кода
 - asyncpg/aiohttp/asyncio/aiofiles

@@ -8,6 +8,7 @@
 <img alt="otec oleg" src="oleg.jpg"> 
 
 ## до хранит господ идущего
+- interview questions
 - https://www.youtube.com/watch?v=ZgojwJEcLn8 - архитектура
 - планирование (obsidian), визуализация - figma
 - глубокое понимание асинхронного кода

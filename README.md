@@ -26,7 +26,7 @@
 - портфолио для собеседований
 - дочитать до конца доку
 - работа с медиа - FileUpload, FileResponse - image, video
-- стриминг video, audio
+- стриминг video, audio, потоковая обработка больших данных
 - postgresql
 - проекты: pinterest, soundcloud, online store (https://thousand-cursed-enemies.com/)
 - платежная система

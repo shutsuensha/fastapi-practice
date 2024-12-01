@@ -9,7 +9,8 @@
 
 ## до хранит господ идущего
 - interview questions
-- resume - https://www.youtube.com/watch?v=9hiYCnydWV4
+- работа с hh - https://www.youtube.com/watch?v=E4Nd-_A4me4, https://t.me/goingtoit
+- работа с resume - https://www.youtube.com/watch?v=9hiYCnydWV4, https://www.youtube.com/watch?v=RUp2HwofyhI
 - https://www.youtube.com/watch?v=ZgojwJEcLn8 - архитектура
 - планирование (obsidian), визуализация - figma
 - глубокое понимание асинхронного кода

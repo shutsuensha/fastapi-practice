@@ -8,6 +8,7 @@
 <img alt="otec oleg" src="oleg.jpg"> 
 
 ## до хранит господ идущего
+- планирование (obsidian), визуализация - figma
 - глубокое понимание асинхронного кода
 - asyncpg/aiohttp/asyncio/aiofiles
 - vuejs

@@ -17,7 +17,7 @@
 - mongodb async
 - принципы RESTfull api
 - Kafka / RabbitMQ
-- aws / azure
+- aws / azure (s3)
 - GraphQL
 - Базы данных - теоремы, индексы, теории, транзакции, ACID, Joins, where, group by, having
 - OOP, SOLID, GRASP, DRY

@@ -7,16 +7,13 @@
 <img alt="otec oleg" src="oleg.jpg"> 
 
 ## до хранит господ идущего
-- interview questions
+- interview questions - python, fastapi
 - работа с hh - https://www.youtube.com/watch?v=E4Nd-_A4me4, https://t.me/goingtoit + related
 - работа с resume - https://www.youtube.com/watch?v=9hiYCnydWV4, https://www.youtube.com/watch?v=RUp2HwofyhI + related
 - https://www.youtube.com/watch?v=ZgojwJEcLn8 - архитектура
 - ошибки поиска работы - https://www.youtube.com/watch?v=cSPAiV00_94
 - карьерная консультация
-- планирование (obsidian), визуализация - figma
-- глубокое понимание асинхронного кода
-- asyncpg/aiohttp/asyncio/aiofiles
-- vuejs
+- asyncpg/aiohttp/asyncio/aiofiles, понимание асинхронного кода
 - Анализ вакансий для следующих технологий
 - aiogram
 - Паттерны проектирования
@@ -27,20 +24,12 @@
 - GraphQL
 - Базы данных - теоремы, индексы, теории, транзакции, ACID, Joins, where, group by, having
 - OOP, SOLID, GRASP, DRY
-- портфолио для собеседований
 - дочитать до конца доку
 - работа с медиа - FileUpload, FileResponse - image, video
 - стриминг video, audio, потоковая обработка больших данных
 - postgresql
-- проекты: pinterest, soundcloud, online store (https://thousand-cursed-enemies.com/)
-- платежная система
 - интеграция api в aiogram bot
-- cloudflare
-- captcha
-- google one tap, python social auth
-- Анализ популярных сайтов на используемые технологии.
 - pytest
-- fastapi interviews youtube
   
 ## Artem Shumeiko
 - https://solvit.space/
@@ -68,7 +57,7 @@
 - sqlalchemy
 - alembic
 - postgresql
-- jwt tokens
+- jwt
 - redis
 - celery [beat, flower]
 - pytest

@@ -80,4 +80,3 @@
 - vps
 - domain
 - ssl
-- websockets

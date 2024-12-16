@@ -70,13 +70,9 @@
 - postgresql
 - jwt tokens
 - redis
-- celery, celery beat, celery flower
+- celery [beat, flower]
 - pytest
-- ruff 
-- pyright
+- ruff, pyright
 - docker, docker-compose
 - ci/cd gitlab
-- nginx
-- vps
-- domain
-- ssl
+- vps, nginx, domain, ssl

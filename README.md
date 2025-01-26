@@ -8,7 +8,31 @@
 
 
 ## до хранит господ идущего
-  
+- interview questions - python, fastapi
+- работа с hh - https://www.youtube.com/watch?v=E4Nd-_A4me4, https://t.me/goingtoit + related
+- работа с resume - https://www.youtube.com/watch?v=9hiYCnydWV4, https://www.youtube.com/watch?v=RUp2HwofyhI + related
+- https://www.youtube.com/watch?v=ZgojwJEcLn8 - архитектура
+- ошибки поиска работы - https://www.youtube.com/watch?v=cSPAiV00_94
+- карьерная консультация
+- asyncpg/aiohttp/asyncio/aiofiles, понимание асинхронного кода
+- Анализ вакансий для следующих технологий
+- aiogram
+- Паттерны проектирования
+- mongodb async
+- принципы RESTfull api
+- Kafka / RabbitMQ
+- aws / azure (s3)
+- GraphQL
+- Базы данных - теоремы, индексы, теории, транзакции, ACID, Joins, where, group by, having
+- OOP, SOLID, GRASP, DRY
+- дочитать до конца доку
+- работа с медиа - FileUpload, FileResponse - image, video
+- стриминг video, audio, потоковая обработка больших данных
+- postgresql
+- интеграция api в aiogram bot
+- pytest
+
+## links
 - https://solvit.space/
 - https://artemshumeiko.zenclass.ru/student/courses/937c3a35-998d-4420-bd3d-9f64db23be23/lessons/18c89b4f-19e3-481f-be49-b9eda822a430
 - https://github.com/artemonsh/backend-course/

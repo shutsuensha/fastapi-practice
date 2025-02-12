@@ -58,4 +58,5 @@
 - docker, docker-compose
 - ci/cd gitlab
 - vps, nginx, domain, ssl
+- websockets
 - vue.js

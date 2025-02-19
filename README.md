@@ -37,6 +37,7 @@
 - https://artemshumeiko.zenclass.ru/student/courses/937c3a35-998d-4420-bd3d-9f64db23be23/lessons/18c89b4f-19e3-481f-be49-b9eda822a430
 - https://github.com/artemonsh/backend-course/
 - https://t.me/+Oc5DtSUQsKwyOWEy
+- https://t.me/+3OPzvJ2qmWM2OWRi
 - t.me/artemshumeiko
 - https://www.youtube.com/@artemshumeiko
 - https://s1.sharewood.co/threads/michael-yin-polnoe-rukovodstvo-po-celery-i-fastapi-2022.389982/ - https://cloud.mail.ru/public/hDa4/Rpz7fHKda

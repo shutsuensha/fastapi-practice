@@ -12,7 +12,7 @@ from app.main import app  # noqa: E402
 from app.routers.dependencies import get_db  # noqa: E402
 import json  # noqa: E402
 
-db_url = "postgresql+asyncpg://evalshine:docent1315@booking_db_test:5432/booking"
+db_url = "postgresql+asyncpg://user:password@booking_db_test:5432/booking"
 
 engine_null_pool = create_async_engine(db_url, poolclass=NullPool)
 async_session_maker_null_pool = async_sessionmaker(bind=engine_null_pool, expire_on_commit=False)

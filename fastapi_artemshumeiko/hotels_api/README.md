@@ -275,11 +275,7 @@ docker run --rm -it \
 - enter docker:dind
 - nano /srv/gitlab-runner/config/config.toml
 - volumes = ["/cache"] меняем на
-- volumes = [
-      "/var/run/docker.sock:/var/run/docker.sock",
-      "/cache",
-      "/builds:/builds"
-    ]
+- volumes = [ "/var/run/docker.sock:/var/run/docker.sock", "/cache", "/srv/gitlab-runner/builds:/builds" ]
 - Gitlab build - pipelines
 - try teplate - commit
 - git pull gitlab main

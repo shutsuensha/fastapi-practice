@@ -255,8 +255,9 @@ docker run --name booking_nginx \
 docker run -d --name gitlab-runner --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v /srv/gitlab-runner/builds:/builds \
+  -v /builds:/builds \
   gitlab/gitlab-runner:alpine
+
 ```
 - settings ci/cd
 - disable instance runner
@@ -275,7 +276,7 @@ docker run --rm -it \
 - enter docker:dind
 - nano /srv/gitlab-runner/config/config.toml
 - volumes = ["/cache"] меняем на
-- volumes = [ "/var/run/docker.sock:/var/run/docker.sock", "/cache", "/srv/gitlab-runner/builds:/builds" ]
+- volumes = [ "/var/run/docker.sock:/var/run/docker.sock", "/cache", "/builds:/builds" ]
 - Gitlab build - pipelines
 - try teplate - commit
 - git pull gitlab main

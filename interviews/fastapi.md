@@ -14,25 +14,31 @@
 
 Пример:
 
+```python
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
+```
 
 ## 3. Что такое path parameters и query parameters в FastAPI? Приведи примеры.
 
 - **Path parameters** — параметры, указанные в URL.
   Пример:
 
+```python
 @app.get("/items/{item_id}")
 def read_item(item_id: int):
     return {"item_id": item_id}
+```
 
 - **Query parameters** — параметры, передаваемые через строку запроса.
   Пример:
 
+```python
 @app.get("/items/")
 def read_items(q: str = None):
     return {"q": q}
+```
 
 ## 4. Как работает автоматическая генерация OpenAPI документации в FastAPI?
 
@@ -44,10 +50,12 @@ FastAPI автоматически генерирует документацию
 
 Пример:
 
+```python
 @app.get("/items/")
 async def get_items():
     items = await fetch_items_from_db()
     return items
+```
 
 ## 6. Что произойдет, если забыть использовать `await` в асинхронной функции?
 
@@ -59,19 +67,21 @@ FastAPI позволяет использовать асинхронные би�
 
 Пример с `asyncpg`:
 
+```python
 import asyncpg
 async def get_user(user_id: int):
     conn = await asyncpg.connect(user='user', password='password', database='test')
     row = await conn.fetchrow('SELECT * FROM users WHERE id=$1', user_id)
     await conn.close()
     return row
+```
 
 ## 8. Что такое dependency injection в FastAPI и как работает `Depends()`?
 
 **Dependency Injection** позволяет инжектировать зависимости в функцию обработки маршрута, например, подключение к базе данных или авторизацию. В FastAPI это делается с помощью `Depends()`.
 
 Пример:
-
+```python
 from fastapi import Depends
 
 def get_db():
@@ -84,13 +94,14 @@ def get_db():
 @app.get("/items/")
 def read_items(db: DBConnection = Depends(get_db)):
     return db.get_items()
+```
 
 ## 9. Как работают вложенные зависимости с `Depends()`?
 
 Вложенные зависимости позволяют инжектировать одну зависимость внутри другой. Например, можно создать зависимость для подключения к базе данных и еще одну для выполнения транзакций.
 
 Пример:
-
+```python
 def get_db():
     db = DBConnection()
     try:
@@ -104,13 +115,13 @@ def get_user(db: DBConnection, user_id: int):
 @app.get("/user/{user_id}")
 def read_user(user: dict = Depends(get_user)):
     return user
-
+```
 ## 10. Как работают модели Pydantic в FastAPI для валидации данных?
 
 **Pydantic** используется для валидации и сериализации данных, полученных от пользователя. Модели Pydantic описывают структуру данных и проверяют их типы.
 
 Пример:
-
+```python
 from pydantic import BaseModel
 
 class Item(BaseModel):
@@ -120,13 +131,13 @@ class Item(BaseModel):
 @app.post("/items/")
 def create_item(item: Item):
     return item
-
+```
 ## 11. Как кастомизировать валидаторы в Pydantic?
 
 В Pydantic можно использовать `@root_validator` и `@validator` для кастомной валидации данных.
 
 Пример:
-
+```python
 from pydantic import BaseModel, validator
 
 class Item(BaseModel):
@@ -138,7 +149,7 @@ class Item(BaseModel):
         if not v[0].isupper():
             raise ValueError("Name must be capitalized")
         return v
-
+```
 ## 12. Какая разница между `parse_obj` и `model_validate` в Pydantic v2?
 
 - **`parse_obj()`** — используется для преобразования данных в модель Pydantic.
@@ -153,7 +164,7 @@ class Item(BaseModel):
 **HTTPException** используется для поднятия ошибок с кастомными сообщениями и статусами.
 
 Пример:
-
+```python
 from fastapi import HTTPException
 
 @app.get("/items/{item_id}")
@@ -161,13 +172,13 @@ def read_item(item_id: int):
     if item_id not in db:
         raise HTTPException(status_code=404, detail="Item not found")
     return db[item_id]
-
+```
 ## 15. Как ты тестируешь FastAPI приложение?
 
 Для тестирования можно использовать `TestClient` и `pytest`.
 
 Пример:
-
+```python
 from fastapi.testclient import TestClient
 from app import app
 
@@ -177,13 +188,13 @@ def test_read_item():
     response = client.get("/items/1")
     assert response.status_code == 200
     assert response.json() == {"item_id": 1, "q": None}
-
+```
 ## 16. Как реализовать JWT-аутентификацию в FastAPI?
 
 Для JWT-аутентификации нужно создать и проверять токены с помощью библиотеки `pyjwt`.
 
 Пример:
-
+```python
 import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
@@ -195,7 +206,7 @@ def decode_token(token: str):
         return jwt.decode(token, "secret_key", algorithms=["HS256"])
     except jwt.ExpiredSignatureError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Token expired")
-
+```
 ## 17. Как упаковать FastAPI приложение в Docker контейнер?
 
 Пример `Dockerfile`:

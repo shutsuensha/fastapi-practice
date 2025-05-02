@@ -1,11 +1,30 @@
 ## FastAPI until giving a job offer :trollface:
 
-- понимание асинхронного кода fastapi + asyncio + event loop
+Темы для подготовки к собеседованиям как Python Backend с упором на FastAPI
+- общие вопросы детально по FastAPI
+- общие вопросы детально по SQLAlchemy
+- понимание асинхронного кода asyncio + event loop
 - restfull pinciples
 - базы данных/транзакции/acid/cap теоремы - примеры с sqlalchemy
 - generators, async generators, with, async with, async for, декартаоры
 - SOLID, Clean Architecture, DDD
 - ООП
+- общие вопросы детально по тестирование - Pytest + Async Httpx, mock, fixtures, dependencies override
+- общие вопросы детально по celery
+- общие вопросы детально по rabbitmq
+- общие вопросы детально по redis
+- общие вопросы детально по python
+- общие вопросы детально по Git
+- общие вопросы детально Postgresql + sql
+- общие вопросы детально по Pydantic
+- общие вопросы детально по Jwt + Oauth2
+- общие вопросы детально по Alembic + Migrations
+- общие вопросы детально по SSE / WebSockets
+- общие вопроы по FastAPI Deploy + production
+- общие вопросы по Производительность и оптимизация
+- обище по безопасности SQL Injection, XSS, CSRF
+- Обработка ошибок и исключений
+- Документация API
 
 
 ### во имя Отца Олега

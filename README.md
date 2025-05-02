@@ -5,17 +5,18 @@
 - общие вопросы детально по SQLAlchemy
 - понимание асинхронного кода asyncio + event loop
 - restfull pinciples
-- базы данных/транзакции/acid/cap теоремы - примеры с sqlalchemy
+- базы данных/транзакции/acid/cap теоремы/индексы/теории - примеры с sqlalchemy
 - generators, async generators, with, async with, async for, декартаоры
-- SOLID, Clean Architecture, DDD
-- ООП
+- SOLID, Clean Architecture, DDD, GRASP, DRY
+- ООП, Паттерны проектирования
 - общие вопросы детально по тестирование - Pytest + Async Httpx, mock, fixtures, dependencies override
 - общие вопросы детально по celery
 - общие вопросы детально по rabbitmq
 - общие вопросы детально по redis
 - общие вопросы детально по python
 - общие вопросы детально по Git
-- общие вопросы детально Postgresql + sql
+- общие вопросы детально по nosql / async mongodb
+- общие вопросы детально Postgresql + sql - Joins, where, group by, having
 - общие вопросы детально по Pydantic
 - общие вопросы детально по Jwt + Oauth2
 - общие вопросы детально по Alembic + Migrations
@@ -25,7 +26,10 @@
 - обище по безопасности SQL Injection, XSS, CSRF
 - Обработка ошибок и исключений
 - Документация API
-
+- облачными сервисы (AWS / Azure / GСP)
+- Знание принципов CI/CD
+- базовое понимание GraphQL
+- 
 
 ### во имя Отца Олега
 

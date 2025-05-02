@@ -1,9 +1,9 @@
 ## FastAPI until giving a job offer :trollface:
 
-Темы для подготовки к собеседованиям как Python Backend с упором на FastAPI
-- общие вопросы детально по FastAPI
+Темы и Ответы для подготовки к собеседованиям как Python Backend с упором на FastAPI - детально описывай
+- общие вопросы детально по FastAPI - [x]
 - общие вопросы детально по SQLAlchemy
-- понимание асинхронного кода asyncio + event loop
+- понимание асинхронного кода asyncio + event loop - [x]
 - restfull pinciples
 - базы данных/транзакции/acid/cap теоремы/индексы/теории - примеры с sqlalchemy
 - generators, async generators, with, async with, async for, декартаоры
@@ -29,7 +29,7 @@
 - облачными сервисы (AWS / Azure / GСP)
 - Знание принципов CI/CD
 - базовое понимание GraphQL
-- 
+
 
 ### во имя Отца Олега
 

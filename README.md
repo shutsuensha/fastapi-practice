@@ -1,5 +1,13 @@
 ## FastAPI until giving a job offer :trollface:
 
+- понимание асинхронного кода fastapi + asyncio + event loop [x]
+- restfull pinciples
+- базы данных/транзакции/acid/cap теоремы - примеры с sqlalchemy
+- generators, async generators, with, async with, async for, декартаоры
+- SOLID, Clean Architecture, DDD
+- ООП
+
+
 ### во имя Отца Олега
 
 | Текст                                                                                                                      | Картинка                |

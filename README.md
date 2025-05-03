@@ -1,7 +1,7 @@
 ## FastAPI until giving a job offer :trollface:
 
 Темы и Ответы для подготовки к собеседованиям как Python Backend с упором на FastAPI - детально описывай
-- общие вопросы детально по FastAPI - []
+- общие вопросы детально по FastAPI - [x]
 - общие вопросы детально по SQLAlchemy
 - понимание асинхронного кода asyncio + event loop - [x]
 - restfull pinciples

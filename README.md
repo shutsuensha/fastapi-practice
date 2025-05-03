@@ -1,34 +1,34 @@
 ## FastAPI until giving a job offer :trollface:
 
 Темы и Ответы для подготовки к собеседованиям как Python Backend с упором на FastAPI - детально описывай
--общие вопросы детально по FastAPI - [x]
--общие вопросы детально по SQLAlchemy - [x]
--понимание асинхронного кода asyncio + event loop - [x]
--restfull pinciples - [x]
--базы данных/транзакции/acid/cap теоремы/индексы/теории
--generators, async generators, with, async with, async for, декартаоры
--SOLID, Clean Architecture, DDD, GRASP, DRY
--ООП, Паттерны проектирования
--общие вопросы детально по тестирование - Pytest + Async Httpx, mock, fixtures, dependencies override
--общие вопросы детально по celery - [x]
--общие вопросы детально по rabbitmq
--общие вопросы детально по redis
--общие вопросы детально по python
--общие вопросы детально по Git
--общие вопросы детально по nosql / async mongodb
--общие вопросы детально Postgresql + sql - Joins, where, group by, having
--общие вопросы детально по Pydantic
--общие вопросы детально по Jwt + Oauth2
--общие вопросы детально по Alembic + Migrations
--общие вопросы детально по SSE / WebSockets
--общие вопроы по FastAPI Deploy + production
--общие вопросы по Производительность и оптимизация
--обище вопросы по безопасности SQL Injection, XSS, CSRF
--Обработка ошибок и исключений
--Документация API
--облачными сервисы (AWS / Azure / GСP)
--Знание принципов CI/CD
--базовое понимание GraphQL
+- общие вопросы детально по FastAPI - [x]
+- общие вопросы детально по SQLAlchemy - [x]
+- понимание асинхронного кода asyncio + event loop - [x]
+- restfull pinciples - [x]
+- базы данных/транзакции/acid/cap теоремы/индексы/теории
+- generators, async generators, with, async with, async for, декартаоры
+- SOLID, Clean Architecture, DDD, GRASP, DRY
+- ООП, Паттерны проектирования
+- общие вопросы детально по тестирование - Pytest + Async Httpx, mock, fixtures, dependencies override
+- общие вопросы детально по celery - [x]
+- общие вопросы детально по rabbitmq
+- общие вопросы детально по redis
+- общие вопросы детально по python
+- общие вопросы детально по Git
+- общие вопросы детально по nosql / async mongodb
+- общие вопросы детально Postgresql + sql - Joins, where, group by, having
+- общие вопросы детально по Pydantic
+- общие вопросы детально по Jwt + Oauth2
+- общие вопросы детально по Alembic + Migrations
+- общие вопросы детально по SSE / WebSockets
+- общие вопроы по FastAPI Deploy + production
+- общие вопросы по Производительность и оптимизация
+- обище вопросы по безопасности SQL Injection, XSS, CSRF
+- Обработка ошибок и исключений
+- Документация API
+- облачными сервисы (AWS / Azure / GСP)
+- Знание принципов CI/CD
+- базовое понимание GraphQL
 
 
 ### во имя Отца Олега

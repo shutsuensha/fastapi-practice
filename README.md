@@ -1,5 +1,7 @@
 ## FastAPI until giving a job offer :trollface:
 
+https://mvp.ed-trees.ru/skill_levels/670/
+
 Темы и Ответы для подготовки к собеседованиям как Python Backend с упором на FastAPI - детально описывай
 - общие вопросы детально по FastAPI - [x]
 - общие вопросы детально по SQLAlchemy - [x]

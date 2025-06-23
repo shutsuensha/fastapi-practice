@@ -1,11 +1,8 @@
 
 
-## usefull
-- работа с hh - https://www.youtube.com/watch?v=E4Nd-_A4me4, https://t.me/goingtoit + related
-- работа с resume - https://www.youtube.com/watch?v=9hiYCnydWV4, https://www.youtube.com/watch?v=RUp2HwofyhI + related
-- ошибки поиска работы - https://www.youtube.com/watch?v=cSPAiV00_94
 
-## links
+
+
 - https://solvit.space/
 - https://artemshumeiko.zenclass.ru/student/courses/937c3a35-998d-4420-bd3d-9f64db23be23/lessons/18c89b4f-19e3-481f-be49-b9eda822a430
 - https://github.com/artemonsh/backend-course/
@@ -21,20 +18,4 @@
 
 
 
-### Удалить все контейнеры
-docker rm -f $(docker ps -aq)
-
-### Удалить все образы
-docker rmi -f $(docker images -q)
-
-### Удалить все тома
-docker volume rm $(docker volume ls -q)
-
-### Удалить все пользовательские сети
-docker network rm $(docker network ls -q | grep -v 'bridge\|host\|none')
-
-### Удалить весь кэш сборки
-docker builder prune --all --force
-
-### Также можно финально подчистить:
-docker system prune -a --volumes --force
+тестовое fastapi + aiogram
